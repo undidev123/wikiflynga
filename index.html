@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiFlynga</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+        }
+        button {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>WikiFlynga</h1>
+    <input type="text" id="search" placeholder="Pesquise uma palavra...">
+    <button onclick="searchWord()">Pesquisar</button>
+    
+    <script>
+        function searchWord() {
+            let word = document.getElementById('search').value.toLowerCase();
+            let dictionary = {
+                "flynga": "./paginasdicionarios/flynga.html",
+                "flanga": "./paginasdicionarios/flanga.html",
+				"flungo": "./paginasdicionarios/flungo.html",
+				"flungonews": "./paginasdicionarios/flungonews.html",
+				"flynga": "./paginasdicionarios/flynga.html",
+				"flyngaaua": "./paginasdicionarios/flyngaaua.html",
+				"flyngacity": "./paginasdicionarios/flyngacity.html",
+				"flyngaland": "./paginasdicionarios/flyngaland.html",
+				"flynganews": "./paginasdicionarios/flynganews.html",
+				"flyngauau": "./paginasdicionarios/flyngauau.html",
+				"flyngopolis": "./paginasdicionarios/flyngopolis.html",
+				"flyngues": "./paginasdicionarios/flyngues.html",
+				"gostavo": "./paginasdicionarios/gostavo.html",
+				"icaro": "./paginasdicionarios/icaro.html",
+				"icarosmilk": "./paginasdicionarios/icarosmilk.html",
+				"igor": "./paginasdicionarios/igor.html",
+				"kagueinakama": "./paginasdicionarios/kagueinakama.html",
+				"milk": "./paginasdicionarios/milk.html",
+				"premilk": "./paginasdicionarios/premilk.html",
+				"titakonakama": "./paginasdicionarios/titakonakama.html"
+            };
+            
+            if (dictionary[word]) {
+                window.location.href = dictionary[word];
+            } else {
+                alert("Palavra não encontrada no dicionário.");
+            }
+        }
+    </script>
+</body>
+</html>

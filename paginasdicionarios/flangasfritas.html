@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário em Flynguês - Flangas fritas</title>
+    <script>
+        function pesquisar() {
+            var termo = document.getElementById("pesquisa").value.toLowerCase();
+            if (termo === "maça") {
+                window.location.href = "maca.html";
+            } else {
+                alert("Palavra não encontrada!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Dicionário em Flynguês</h1>
+    <input type="text" id="pesquisa" placeholder="Pesquise uma palavra...">
+    <button onclick="pesquisar()">Pesquisar</button>
+    
+    <h1>Flangas fritas</h1>
+    <p>Flangas fritas é um restaurante originario de flyngaland bastante conhecido pelo prato <a href="flanga.html">flanga</a> frita<br> além disso ele tem varias outras comidas como salada premium,onion ring e também o famoso pelo Molho Gostavo criado por <a href="gostavo.html">gostavo</a> obviamente,o flangas fritas também é um nome da comida flanga + fritas</p>
+	<h1>Origem</h1>
+	<p>Criado por kinho em 2023</p>
+</body>
+</html>

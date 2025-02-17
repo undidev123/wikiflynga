@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicionário em Flynguês - Flungo</title>
+    <script>
+        function pesquisar() {
+            var termo = document.getElementById("pesquisa").value.toLowerCase();
+            if (termo === "maça") {
+                window.location.href = "maca.html";
+            } else {
+                alert("Palavra não encontrada!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Dicionário em Flynguês</h1>
+    <input type="text" id="pesquisa" placeholder="Pesquise uma palavra...">
+    <button onclick="pesquisar()">Pesquisar</button>
+    
+    <h1>Flungo</h1>
+    <p>Um objeto que tem formato semelhante aos testiculos humanos ficando na mesma região,no futuro ele originou outras palavras como flungão entre outros</p>
+	<h1>Origem</h1>
+	<p>Não tem uma exatamente confirmada mas fontes indicam que pode ter vindo da bacteria "Flungos Celulosis"</p>
+</body>
+</html>
