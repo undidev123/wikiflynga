@@ -1,33 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicionário em Flynguês - Flungonews</title>
-	    <style>
+    <title>Flungonews</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<script src="app.js"></script>
+    <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
+			font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            background-color: white;
         }
-        input {
-            padding: 10px;
-            width: 300px;
+        header {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px 10px;
+            border-bottom: 1px solid #ddd;
+            gap: 10px;
         }
-        button {
-            padding: 10px;
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 18px;
             cursor: pointer;
         }
+        .search-bar {
+            padding: 5px;
+			height: 25px;
+			width: 300px;
+        }
+        .user-options {
+            display: flex;
+            gap: 10px;
+        }
+        aside {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: fixed;
+            height: 100%;
+            top: 50px;
+            left: 0;
+        }
+        main {
+            margin-left: 270px;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		.direito {
+		margin-left: auto;
+		}
+		.artigo {
+			padding: 10px;
+		}
+		.logo {
+			width: 145px;
+			height: 40px;
+		}
     </style>
-    <script src="app.js"></script>
 </head>
 <body>
-    <h1>Dicionário em Flynguês</h1>
-    <input type="text" id="search" placeholder="Pesquise uma palavra...">
-    <button onclick="searchWord()">Pesquisar</button>
-     <div class="inner-cursor"></div>
-    <div class="outer-cursor"></div>
+    <header>
+        <button class="menu-button">☰</button>
+        <img class="logo" src="logo.png">
+          <input type="text" id="search" placeholder="Pesquise uma palavra..." class="search-bar">
+		<button onclick="searchWord()" class="fa-solid fa-magnifying-glass" style="width: 40px;height: 40px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);cursor: pointer;"><a href=""></a></button>
+		<div class="direito">
+		<a href="doacao.html">Doações</a>
+		<a href="doacao.html">Criar uma conta</a>
+		<a href="doacao.html">Entrar</a>
+		</div>
+    </header>
+	<div class="artigo">
+	<h1>Flungonews</h1>
 
-    <h1>Flungonews</h1>
 	<p>O flungonews é um jornal criado por zlokgg1k,ele é um jornal originario da cidade de <a href="flyngaland.html">flyngaland</a> que surgiu após o começo do sucesso do <a href="flynganews.html">flynganews</a>,ele recebeu uma sede oficial do lado da casa 4,além disso ele patrocinou uma banca,o jornal fez muitas entrevistas,reportagens,e sempre era patrocinado por discos de musica,em um jornal até apareceu a flynga de igor,igor até se sentiu um pouco incomodado mas mesmo assim continuou sendo um grande fã</p>
 	<h2>Origem</h1>
 	<p>O flungonews surgiu criado por zlokzgg1k após ele ver o começo do sucesso do <a href="flynganews.html">flynganews</a>,ele 
@@ -44,5 +106,6 @@
 	<a href="flyngaland.html">Flyngaland</a>
 	<a href="flyngastone.html">Flyngastone</a>
 	<a href="flyngacity.html">Milk</a>
+	</div>
 </body>
 </html>

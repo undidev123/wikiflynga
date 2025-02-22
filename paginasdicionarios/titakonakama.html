@@ -1,29 +1,93 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WikiFlynga</title>
-	    <style>
+    <title>Titako Nakama e Alan Delas</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<script src="app.js"></script>
+    <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 50px;
+			font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            background-color: white;
         }
-        input {
-            padding: 10px;
-            width: 300px;
+        header {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px 10px;
+            border-bottom: 1px solid #ddd;
+            gap: 10px;
         }
-        button {
-            padding: 10px;
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 18px;
             cursor: pointer;
         }
+        .search-bar {
+            padding: 5px;
+			height: 25px;
+			width: 300px;
+        }
+        .user-options {
+            display: flex;
+            gap: 10px;
+        }
+        aside {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: fixed;
+            height: 100%;
+            top: 50px;
+            left: 0;
+        }
+        main {
+            margin-left: 270px;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		.direito {
+		margin-left: auto;
+		}
+		.artigo {
+			padding: 10px;
+		}
+		.logo {
+			width: 145px;
+			height: 40px;
+		}
     </style>
-    <script src="app.js"></script>
 </head>
 <body>
-    <h1>WikiFlynga</h1>
-    <input type="text" id="search" placeholder="Pesquise uma palavra...">
-    <button onclick="searchWord()">Pesquisar</button>
+    <header>
+        <button class="menu-button">☰</button>
+        <img class="logo" src="logo.png">
+          <input type="text" id="search" placeholder="Pesquise uma palavra..." class="search-bar">
+		<button onclick="searchWord()" class="fa-solid fa-magnifying-glass" style="width: 40px;height: 40px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);cursor: pointer;"><a href=""></a></button>
+		<div class="direito">
+		<a href="doacao.html">Doações</a>
+		<a href="doacao.html">Criar uma conta</a>
+		<a href="doacao.html">Entrar</a>
+		</div>
+    </header>
+	<div class="artigo">
     
     <h1>Titako Nakama</h1>
 	<p>A carreira do titako nakama começou com uma musica inspirada no som das flyngagens dos seus colegas,em pouco tempo ele fez a musica e mostrou pros amigos dele,todo mundo gostou,então ele decidiu lançar como pré-venda e o pessoal comprou,ele finalmente lançou e foi um sucesso flyngal,todo mundo ouvia,crianças,adolescentes,adultos,idosos,todo mundo,em bares e restaurantes só estavam essa musica,um estudo foi realizado e mostrou que essa musica acalmava bebês,depois disso ele decidiu parar um pouco com as musicas,depois disso ele voltou com dois hits,uma musica rapida mas muito boa "Caguei na cama calma não reclama" e "Flyngagens constantes no rim do velhante",de acordo com zlokz e kinho,criadores tanto do <a href="flynganews.html">flynganews</a> e <a href="flungonews.html">flungonews</a> falaram que se viciaram nessa musica,para terminar a carreira ele fez uma parceria com o <a href="flangasfritas.html">Flangas Fritas</a> e lançou uma musica para terminar a sua carreira.
@@ -33,5 +97,7 @@
 	<p>1.Ritmo brincante</br>2.Caguei na cama calma não reclama<br>3.Flyngagens constantes no rim do velhante<br>4.Até que apareceu o flyngauau<br>5.Flangas Fritas Theme</p>
 	<h1>Parentes conhecidos</h1>
 	<p>Ele tem um primo tanto conhecido chamado <a href="kagueinakama.html">Kaguei nakama</a>,não confuda com a nova musica dele.</p>
+
+	</div>
 </body>
 </html>
