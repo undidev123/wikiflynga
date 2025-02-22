@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maçã - Wikipédia Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .search-bar {
+  
+            margin: 0 20px;
+        }
+		.wikiflynga {
+			width: 250px;
+			height: 40px;
+		
+		}
+		
+        .search-bar input {
+            width: 100%;
+            padding: 5px;
+        }
+        .user-options {
+            display: flex;
+            gap: 15px;
+        }
+        aside {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: fixed;
+            height: 100%;
+            top: 50px;
+            left: 0;
+        }
+        main {
+            margin-left: 270px;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="menu-button">☰</button>
+		<img src="logo.png" class="wikiflynga">
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar na Wikipédia...">
+        </div>
+        <div class="user-options">
+            <span>Donativos</span>
+            <span>Criar uma conta</span>
+            <span>Entrar</span>
+        </div>
+    </header>
+    
+    <aside>
+        <h2>Conteúdo</h2>
+        <ul>
+            <li><a href="#origem">Origem</a></li>
+            <li><a href="#tipos">Tipos</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#curiosidades">Curiosidades</a></li>
+        </ul>
+    </aside>
+    
+    <main>
+        <h1>Maçã</h1>
+        <p>A maçã é um fruto produzido pela macieira (Malus domestica), amplamente cultivada em todo o mundo.</p>
+        
+        <section id="origem">
+            <h2>Origem</h2>
+            <p>Acredita-se que a macieira tenha se originado na Ásia Central, sendo uma das primeiras árvores cultivadas pelo ser humano.</p>
+        </section>
+
+        <section id="tipos">
+            <h2>Tipos de Maçã</h2>
+            <p>Existem diversas variedades de maçã, incluindo Fuji, Gala, Granny Smith e Red Delicious.</p>
+        </section>
+
+        <section id="beneficios">
+            <h2>Benefícios para a Saúde</h2>
+            <p>Rica em fibras e antioxidantes, a maçã pode auxiliar na digestão e na prevenção de doenças cardíacas.</p>
+        </section>
+
+        <section id="curiosidades">
+            <h2>Curiosidades</h2>
+            <p>A maçã foi um dos frutos associados à história de Isaac Newton e sua teoria da gravidade.</p>
+        </section>
+    </main>
+    
+    <script>
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

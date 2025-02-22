@@ -21,6 +21,7 @@
 				"milk": "milk.html",
 				"premilk": "premilk.html",
 				"titakonakama": "titakonakama.html"
+				"vizinhos brincantes": "vizinhosbrincantes.html"
             };
             
             if (dictionary[word]) {

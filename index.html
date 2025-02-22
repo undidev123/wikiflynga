@@ -1,54 +1,38 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WikiFlynga</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 50px;
-        }
-        input {
-            padding: 10px;
-            width: 300px;
-        }
-        button {
-            padding: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Wikipedia Home Page Clone</title>
 </head>
-<body>
-    <h1>WikiFlynga</h1>
-    <input type="text" id="search" placeholder="Pesquise uma palavra...">
-    <button onclick="searchWord()">Pesquisar</button>
-    
-    <script>
+ <script>
         function searchWord() {
             let word = document.getElementById('search').value.toLowerCase();
             let dictionary = {
-                "flynga": "./paginasdicionarios/flynga.html",
-                "flanga": "./paginasdicionarios/flanga.html",
-				"flungo": "./paginasdicionarios/flungo.html",
+                "flynga": "./paginasdicionarios/emdesenvolvimento",
+                "flanga": "./paginasdicionarios/emdesenvolvimento.html",
+				"flungo": "./paginasdicionarios/emdesenvolvimento.html",
 				"flungonews": "./paginasdicionarios/flungonews.html",
-				"flynga": "./paginasdicionarios/flynga.html",
-				"flyngaaua": "./paginasdicionarios/flyngaaua.html",
+				"flynga": "./paginasdicionarios/emdesenvolvimento.html",
+				"flyngaaua": "./paginasdicionarios/emdesenvolvimento.html",
 				"flyngacity": "./paginasdicionarios/flyngacity.html",
-				"flyngaland": "./paginasdicionarios/flyngaland.html",
+				"flyngaland": "./paginasdicionarios/emdesenvolvimento.html",
 				"flynganews": "./paginasdicionarios/flynganews.html",
-				"flyngauau": "./paginasdicionarios/flyngauau.html",
-				"flyngopolis": "./paginasdicionarios/flyngopolis.html",
-				"flyngues": "./paginasdicionarios/flyngues.html",
-				"gostavo": "./paginasdicionarios/gostavo.html",
-				"icaro": "./paginasdicionarios/icaro.html",
-				"icarosmilk": "./paginasdicionarios/icarosmilk.html",
-				"igor": "./paginasdicionarios/igor.html",
-				"kagueinakama": "./paginasdicionarios/kagueinakama.html",
-				"milk": "./paginasdicionarios/milk.html",
-				"premilk": "./paginasdicionarios/premilk.html",
-				"titakonakama": "./paginasdicionarios/titakonakama.html"
+				"flyngauau": "./paginasdicionarios/emdesenvolvimento.html",
+				"flyngopolis": "./paginasdicionarios/emdesenvolvimento.html",
+				"flyngues": "./paginasdicionarios/emdesenvolvimento.html",
+				"gostavo": "./paginasdicionarios/emdesenvolvimento.html",
+				"icaro": "./paginasdicionarios/emdesenvolvimento.html",
+				"icarosmilk": "./paginasdicionarios/emdesenvolvimento.html",
+				"igor": "./paginasdicionarios/emdesenvolvimento.html",
+				"kaguei nakama": "./paginasdicionarios/kagueinakama.html",
+				"milk": "./paginasdicionarios/emdesenvolvimento.html",
+				"premilk": "./paginasdicionarios/emdesenvolvimento.html",
+				"titako nakama": "./paginasdicionarios/titakonakama.html",
+				"vizinhos brincantes": "./paginasdicionarios/vizinhosbrincantes.html"
             };
             
             if (dictionary[word]) {
@@ -58,5 +42,86 @@
             }
         }
     </script>
+<body>
+    <main>
+        <div class="title">
+            <h2>Wikiflyng</h2>
+            <p>A Enciclopedia mais flyngal</p>
+        </div>
+        <div class="langs">
+            <div class="left">
+                <div class="single" style="transform: translateX(70%);">
+                    <h4><a href="./paginasdicionarios/flyngacity.html">Flyngacity</a></h4>
+                    <p>Feito por zlokz</p>
+                </div>
+                <div class="single" style="transform: translateX(20%);">
+                    <h4><a href="./paginasdicionarios/flungonews.html">Flungonews</a></h4>
+                    <p>Feito por zlokz</p>
+                </div>
+                <div class="single" style="transform: translateX(10%);">
+                    <h4><a href="./paginasdicionarios/flynganews.html">Flynganews</a></h4>
+                    <p>Feito por kinho</p>
+                </div>
+                <div class="single" style="transform: translateX(20%);">
+                    <h4><a href="./paginasdicionarios/titakonakama.html">Titako Nakama</a></h4>
+                    <p>Feito por zlokz</p>
+                </div>
+                <div class="single" style="transform: translateX(70%);">
+                    <h4><a href="./paginasdicionarios/emdesenvolvimento.html">Flyngauau</a></h4>
+                    <p>Em desenvolvimento</p>
+                </div>
+            </div>
+            <div class="middle">
+                <img src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2.png" alt="">
+            </div>
+            <div class="right">
+                <div class="single" style="transform: translateX(-70%);">
+                    <h4><a href="./paginasdicionarios/emdesenvolvimento.html">Flangas fritas</a></h4>
+                    <p>Em desenvolvimento</p>
+                </div>
+                <div class="single" style="transform: translateX(-20%);">
+                    <h4><a href="./paginasdicionarios/emdesenvolvimento.html">Flyngaland</a></h4>
+                    <p>Em desenvolvimento</p>
+                </div>
+                <div class="single" style="transform: translateX(-10%);">
+                    <h4><a href="./paginasdicionarios/emdesenvolvimento.html">Flyngopolis</a></h4>
+                    <p>Em desenvolvimento</p>
+                </div>
+                <div class="single" style="transform: translateX(-20%);">
+                    <h4><a href="./paginasdicionarios/emdesenvolvimento.html">Gostavo</a></h4>
+                    <p>Em desenvolvimento</p>
+                </div>
+                <div class="single" style="transform: translateX(-70%);">
+                    <h4><a href="./paginasdicionarios/emdesenvolvimento.html">Adriel</a></h4>
+                    <p>Em desenvolvimento</p>
+                </div>
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" id="search" placeholder="Pesquise uma palavra...">
+			<span>
+			<button onclick="searchWord()" class="fa-solid fa-magnifying-glass" style="width: 100px;height: 45px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);"><a href=""></a></button>
+			</span>
+     
+        </div>
+        <div class="your-lang-wiki-container">
+            <div class="line"></div>
+            <div class="your-lang-wiki">
+                <span>
+                    <i class="fa-solid fa-language"></i>
+                </span>
+                <span>Contribua com mais artigos</span>
+                <span>
+                    <i class="fa-solid fa-angle-down"></i>
+                </span>
+            </div>
+            <div class="line"></div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Essa página foi criada por <a href="zlokz.html">Zlokz</a> / <a href="#"> Termos de uso</a> / <a href="#"> Política de privacidade</a>
+        </p>
+    </footer>
 </body>
 </html>
