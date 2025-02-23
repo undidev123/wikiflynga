@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua conta</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<script src="app.js"></script>
+    <style>
+        body {
+			font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 5px;
+            background-color: white;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px 10px;
+            border-bottom: 1px solid #ddd;
+            gap: 10px;
+        }
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .search-bar {
+            padding: 5px;
+			height: 25px;
+			width: 300px;
+        }
+        .user-options {
+            display: flex;
+            gap: 10px;
+        }
+        aside {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: fixed;
+            height: 100%;
+            top: 50px;
+            left: 0;
+        }
+        main {
+            margin-left: 270px;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		.direito {
+		margin-left: auto;
+		}
+		.artigo {
+			padding: 10px;
+		}
+		.logo {
+			width: 145px;
+			height: 40px;
+		}
+		.frangal  {
+		padding: 5px;
+			height: 15px;
+			width: 250px;
+		}
+		.textopequeno {
+		color: rgb(84, 89, 83);
+		font-size: 12px;
+		}
+		.captcha {
+			padding: 5px;
+			background-color: rgb(248, 249, 250);
+			border: 1px solid #000000;
+			 width: 270px;  /* Defina a largura conforme necessário */
+    height: 200px; /* Defina a altura conforme necessário */
+		}
+		.captcharesposta {
+			height: 25px;
+			width: 250px;
+		
+		}
+		     .notepad {
+            width: 400px;
+            height: 300px;
+            background: white;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            resize: none;
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            background: repeating-linear-gradient(
+                white, white 29px, #ddd 30px
+            );
+            line-height: 30px;
+            padding: 10px;
+        }
+
+        textarea::placeholder {
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <button class="menu-button">☰</button>
+        <a href="../index.html"><img class="logo" src="logo.png"></a>
+          <input type="text" id="search" placeholder="Pesquise uma palavra..." class="search-bar">
+		<button onclick="searchWord()" class="fa-solid fa-magnifying-glass" style="width: 40px;height: 40px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);cursor: pointer;"><a href=""></a></button>
+		<div class="direito">
+		<a href="doacao.html">Doações</a>
+		<a href="createaccount.html">Criar uma conta</a>
+		<a href="entrar.html">Entrar</a>
+		</div>
+    </header>
+	<div class="artigo">
+	<h1>Mande uma mensagem legal (ou não)</h1>
+	<p class="exibirnome">Ativa o javascript por favor</p>
+	<h2>Mande uma carta:</h2>
+	 <div class="notepad">
+        <textarea placeholder="Escreva sua carta legalzona aqui"></textarea>
+    </div>
+	<h1>Agora escolha a localização!</h1>
+ <div class="container">
+        <label for="cidades">Escolha a cidade:</label>
+        <select id="cidades" onchange="atualizarOpcoes()">
+            <option value="">Selecione...</option>
+            <option value="flyngaland">Flyngaland</option>
+            <option value="flyngacity">Flyngacity</option>
+            <option value="flungolandia">Flungolândia</option>
+            <option value="flyngopolis">Flyngopolis</option>
+            <option value="desertocity">Deserto's City</option>
+            <option value="cidadeapocaliptica">Cidade Apocalíptica</option>
+        </select>
+
+        <label for="opcoes" id="label-opcoes" style="display: none;">Opções específicas:</label>
+        <select id="opcoes" style="display: none;"></select>
+		
+		<label for="usarnome">Usar seu nome:</label>
+        <select id="usarnome" onchange="atualizarOpcoes()">
+            <option value="">Selecione...</option>
+            <option value="sim">Sim (Nome)</option>
+            <option value="nao">Não (Anônimo)</option>
+        </select>
+    </div>
+
+    <script>
+        function atualizarOpcoes() {
+            const cidadeSelecionada = document.getElementById("cidades").value;
+            const opcoesDropdown = document.getElementById("opcoes");
+            const labelOpcoes = document.getElementById("label-opcoes");
+
+            // Limpa opções anteriores
+            opcoesDropdown.innerHTML = "";
+
+            if (cidadeSelecionada === "flyngaland") {
+                adicionarOpcao(opcoesDropdown, "mansao", "Mansão Brincal");
+				adicionarOpcao(opcoesDropdown, "renovada", "Renovada 1");
+                adicionarOpcao(opcoesDropdown, "casadepraia", "Casa de Praia");
+                adicionarOpcao(opcoesDropdown, "sedeflungonews", "Sede do FlungoNews");
+				adicionarOpcao(opcoesDropdown, "flangasfritas", "Flangas Fritas");
+                adicionarOpcao(opcoesDropdown, "flyngastone", "Flyngastone");
+				adicionarOpcao(opcoesDropdown, "cinema4d", "Cinema 4d");
+				adicionarOpcao(opcoesDropdown, "museu", "Museu");
+				adicionarOpcao(opcoesDropdown, "lojadepocoes", "Praça das Nuvens");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 1");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 2");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 3");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 4");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 5");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 6");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 7");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 8");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 9");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 10");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 11");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 12");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 13");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 14");
+            } else if (cidadeSelecionada === "flyngacity") {
+                adicionarOpcao(opcoesDropdown, "cativeiro", "Cativeiro de jose fernando");
+				adicionarOpcao(opcoesDropdown, "farmdeferro", "Farm de Ferro Abandonada");
+				adicionarOpcao(opcoesDropdown, "1", "Farm de plantação");
+            } else if (cidadeSelecionada === "flungolandia") {
+                adicionarOpcao(opcoesDropdown, "casazlokz", "Casa feita por zlokz");
+				adicionarOpcao(opcoesDropdown, "sedeflungonews2", "Sede do flungonews");
+            } else if (cidadeSelecionada === "flyngopolis") {
+                adicionarOpcao(opcoesDropdown, "flyngauaucenter", "Flyngauau Center");
+				adicionarOpcao(opcoesDropdown, "flangasfritas", "Flangas Fritas");
+				adicionarOpcao(opcoesDropdown, "casadekinhoantiga", "Casa de kinho antiga");
+				adicionarOpcao(opcoesDropdown, "casazlokz1", "Casa de zlokz");
+				adicionarOpcao(opcoesDropdown, "casakagueinakama", "Casa do kaguei nakama");
+				adicionarOpcao(opcoesDropdown, "casaalandelas", "Casa do Alan delas");
+				adicionarOpcao(opcoesDropdown, "cavernanandertais", "Caverna dos neandertais");
+            } else if (cidadeSelecionada === "desertocity") {
+                adicionarOpcao(opcoesDropdown, "estruturaflyngal", "Estrutura flyngal");
+				adicionarOpcao(opcoesDropdown, "torresgemeas", "Torres Gemeas");
+				adicionarOpcao(opcoesDropdown, "estruturaflyngal2", "Estrutura flyngal 2");
+            } else if (cidadeSelecionada === "cidadeapocaliptica") {
+                adicionarOpcao(opcoesDropdown, "ffabandonado", "Flangas fritas abandonado");
+				adicionarOpcao(opcoesDropdown, "1", "Reality show do pablo marçal");
+				adicionarOpcao(opcoesDropdown, "1", "Reality show casa zumbi");
+				adicionarOpcao(opcoesDropdown, "1", "Flungel");
+				adicionarOpcao(opcoesDropdown, "1", "Flungueiro");
+				adicionarOpcao(opcoesDropdown, "1", "Reality show kinho");
+				adicionarOpcao(opcoesDropdown, "1", "Cassino");
+				adicionarOpcao(opcoesDropdown, "1", "Casa 14");
+            } else {
+                opcoesDropdown.style.display = "none";
+                labelOpcoes.style.display = "none";
+                return;
+            }
+
+            // Exibe o segundo dropdown
+            opcoesDropdown.style.display = "block";
+            labelOpcoes.style.display = "block";
+        }
+
+        function adicionarOpcao(select, valor, texto) {
+            let option = document.createElement("option");
+            option.value = valor;
+            option.textContent = texto;
+            select.appendChild(option);
+        }
+    </script>
+</div>
+	
+	
+	<script>
+	function obterParametro(nome) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(nome);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const nome = obterParametro("name");
+    const elemento = document.querySelector(".exibirnome"); // Seleciona o elemento com a classe
+
+    if (elemento) {
+        elemento.textContent = nome ? `Olá, ${nome}! Mande uma mensagem para aquela pessoa que vc acha flyngal!` : "Olá, Usuario Anônimo! Mande uma mensagem para aquela pessoa que vc acha flyngal!";
+    }
+});
+
+	</script>
+</body>
+</html>

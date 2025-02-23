@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua conta</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<script src="app.js"></script>
+    <style>
+        body {
+			font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            background-color: white;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px 10px;
+            border-bottom: 1px solid #ddd;
+            gap: 10px;
+        }
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .search-bar {
+            padding: 5px;
+			height: 25px;
+			width: 300px;
+        }
+        .user-options {
+            display: flex;
+            gap: 10px;
+        }
+        aside {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: fixed;
+            height: 100%;
+            top: 50px;
+            left: 0;
+        }
+        main {
+            margin-left: 270px;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		.direito {
+		margin-left: auto;
+		}
+		.artigo {
+			padding: 10px;
+		}
+		.logo {
+			width: 145px;
+			height: 40px;
+		}
+		.frangal  {
+		padding: 5px;
+			height: 15px;
+			width: 250px;
+		}
+		.textopequeno {
+		color: rgb(84, 89, 83);
+		font-size: 12px;
+		}
+		.captcha {
+			padding: 5px;
+			background-color: rgb(248, 249, 250);
+			border: 1px solid #000000;
+			 width: 270px;  /* Defina a largura conforme necessário */
+    height: 200px; /* Defina a altura conforme necessário */
+		}
+		.captcharesposta {
+			height: 25px;
+			width: 250px;
+		
+		}
+    </style>
+
+</head>
+<body>
+    <header>
+        <button class="menu-button">☰</button>
+        <a href="../index.html"><img class="logo" src="logo.png"></a>
+          <input type="text" id="search" placeholder="Pesquise uma palavra..." class="search-bar">
+		<button onclick="searchWord()" class="fa-solid fa-magnifying-glass" style="width: 40px;height: 40px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);cursor: pointer;"><a href=""></a></button>
+		<div class="direito">
+		<a href="doacao.html">Doações</a>
+		<a href="createaccount.html">Criar uma conta</a>
+		<a href="entrar.html">Entrar</a>
+		</div>
+    </header>
+	<div class="artigo">
+	
+	<h1>Muito obrigado por sua doação ao WikiFlynga!</h1>
+<p>
+Sua generosidade faz toda a diferença! Graças ao seu apoio, podemos continuar expandindo e melhorando o WikiFlynga, tornando-o uma fonte cada vez mais rica e acessível de conhecimento para todos.<br>
+
+Cada contribuição nos ajuda a manter nossos servidores funcionando, aprimorar nossos conteúdos e desenvolver novas funcionalidades para a comunidade. Nosso objetivo é oferecer informações confiáveis, organizadas e sempre atualizadas, e sua doação nos dá os recursos necessários para alcançar isso.<br>
+
+Acreditamos que o conhecimento deve ser livre e acessível a todos, e você faz parte dessa missão ao apoiar o nosso trabalho. Sua doação não apenas mantém o WikiFlynga no ar, mas também incentiva o crescimento de uma comunidade dedicada ao compartilhamento de informações de qualidade.<br>
+
+Em nome de toda a equipe e de todos os usuários que se beneficiam deste projeto, agradecemos imensamente sua generosidade! Se quiser acompanhar novidades, sugestões ou atualizações, fique à vontade para participar de nossa comunidade.<br>
+
+Muito obrigado por fazer parte dessa jornada! 🚀✨
+</p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .inputo, .seleto, .enviardoacao {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .enviardoacao {
+            background-color: #337ab7;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+        }
+        .enviardoacao:hover {
+            background-color: #286090;
+        }
+    </style>
+    <div class="container">
+        <h2 style="color: #333;">Faça uma Doação</h2>
+        <label for="amount">Valor da Doação:</label>
+        <input type="number" id="amount" placeholder="Digite o valor" min="1" class="inputo">
+
+        <label for="currency">Escolha a moeda:</label>
+        <select id="currency" class="seleto">
+            <option value="EMR">Esmeraldas</option>
+            <option value="DMT">Diamantes</option>
+            <option value="DOS">Dubais Ostentações</option>
+			<option value="TRC">Terracotas</option>
+        </select>
+		        <label for="amount">Seu nome:</label>
+        <input type="text" id="amount" placeholder="Seu nome" min="1" class="inputo">
+		        <label for="amount">Seu email:</label>
+        <input type="email" id="amount" placeholder="Seu email" min="1" class="inputo">
+		        <label for="amount">Sua senha:</label>
+        <input type="password" id="amount" placeholder="Sua senha" min="1" class="inputo">
+
+        <button onclick="sendDonation()" class ="enviardoacao">Enviar Doação</button>
+    </div>
+
+    <script>
+        function sendDonation() {
+            let amount = document.getElementById('amount').value;
+            let currency = document.getElementById('currency').value;
+            
+            if (amount === "" || amount <= 0) {
+                alert("Por favor, insira um valor válido para doação.");
+                return;
+            }
+            
+            alert(`Obrigado por doar ${amount} ${currency} para o WikiFlynga!`);
+        }
+    </script>
+
+	</div>
+	</body>
+	</html>

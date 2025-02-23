@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie sua conta</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<script src="app.js"></script>
+    <style>
+        body {
+			font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            background-color: white;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px 10px;
+            border-bottom: 1px solid #ddd;
+            gap: 10px;
+        }
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .search-bar {
+            padding: 5px;
+			height: 25px;
+			width: 300px;
+        }
+        .user-options {
+            display: flex;
+            gap: 10px;
+        }
+        aside {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: fixed;
+            height: 100%;
+            top: 50px;
+            left: 0;
+        }
+        main {
+            margin-left: 270px;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		.direito {
+		margin-left: auto;
+		}
+		.artigo {
+			padding: 10px;
+		}
+		.logo {
+			width: 145px;
+			height: 40px;
+		}
+		.frangal  {
+		padding: 5px;
+			height: 15px;
+			width: 250px;
+		}
+		.textopequeno {
+		color: rgb(84, 89, 83);
+		font-size: 12px;
+		}
+		.captcha {
+			padding: 5px;
+			background-color: rgb(248, 249, 250);
+			border: 1px solid #000000;
+			 width: 270px;  /* Defina a largura conforme necessário */
+    height: 200px; /* Defina a altura conforme necessário */
+		}
+		.captcharesposta {
+			height: 25px;
+			width: 250px;
+		
+		}
+    </style>
+</head>
+<body>
+    <header>
+        <button class="menu-button">☰</button>
+        <a href="../index.html"><img class="logo" src="logo.png"></a>
+          <input type="text" id="search" placeholder="Pesquise uma palavra..." class="search-bar">
+		<button onclick="searchWord()" class="fa-solid fa-magnifying-glass" style="width: 40px;height: 40px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);cursor: pointer;"><a href=""></a></button>
+		<div class="direito">
+		<a href="doacao.html">Doações</a>
+		<a href="createaccount.html">Criar uma conta</a>
+		<a href="entrar.html">Entrar</a>
+		</div>
+    </header>
+	<div class="artigo">
+	<h1>Criar Conta</h1>
+	<hr>
+	<p>Nome de utilizador</p>
+	<input type="text" placeholder="Coloque seu nome" class="frangal" id="nome">
+	<p>Email</p>
+	<input type="email" placeholder="Coloque seu nome" class="frangal" id="nome">
+	<p class="textopequeno">É recomendado usar o email do emprego ou instituição<br> de onde você trabalha</p>
+	<label for="currency">Sua profissão:</label>
+        <select id="currency" class="seleto">
+            <option value="yt">Youtuber</option>
+            <option value="cff">Cozinheiro do flangas fritas</option>
+            <option value="ceo">CEO</option>
+			<option value="arm">Armoreiro</option>
+			<option value="amr">Armeiro</option>
+            <option value="frm">Ferramenteiro</option>
+            <option value="fzd">Fazendeiro</option>
+			<option value="flc">Freelancer</option>
+			<option value="efa">Escritor do flynganews</option>
+            <option value="efu">Escritor do flungonews</option>
+            <option value="eff">Escritor do flynganoflungock</option>
+			<option value="vdb">Vendendor de batatas</option>
+			<option value="pdr">Pedreiro</option>
+        </select>
+	<p>Senha</p>
+	<input type="password" placeholder="Coloque seu senha" class="frangal">
+	<p class="textopequeno">Recomenda-se compartilhar sua senha para todos os <br>amigos da escola,permita eles usar o seu perfil,liberdade de expressão.</a>
+	<p>Confirmar a senha</p>
+	<input type="password" placeholder="Confirme sua senha" class="frangal">
+	<p>Numero de casa (recomendado)</p>
+	<input type="text" placeholder="Coloque o numero da sua casa" class="frangal">
+	<p class="textopequeno">Não é para colocar o numero da sua casa da vida real<br> jumento,é pra colocar o numero de flyngaland<br> (não compartilhe isso com outras pessoas)</p>
+	<div class="captcha"> 
+	<p>CAPTCHA Verificação de segurança</p>
+	<img src="captcha.png">
+	<input type="text" placeholder="Insira a resposta" class="captcharesposta">
+	<a href="tueburro.html" style="padding: 20px" onclick="alert("Tu é burro?")">Não consegue ver a imagem?</a>
+	</div>
+	<button onclick="redirecionar()" style="width: 280px;height: 40px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);cursor: pointer;">Crie a sua conta</button>
+		</div>
+	<script>
+const nomeInput = document.getElementById('nome');
+
+function redirecionar() {
+    const nome = nomeInput.value; // Pegando o valor do input
+    window.location.href = `mandeumamensagem.html?name=${encodeURIComponent(nome)}`;
+}
+
+	</script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flynganews</title>
+    <title>Crie sua conta</title>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 		<script src="app.js"></script>
     <style>
@@ -73,6 +73,27 @@
 			width: 145px;
 			height: 40px;
 		}
+		.frangal  {
+		padding: 5px;
+			height: 15px;
+			width: 250px;
+		}
+		.textopequeno {
+		color: rgb(84, 89, 83);
+		font-size: 12px;
+		}
+		.captcha {
+			padding: 5px;
+			background-color: rgb(248, 249, 250);
+			border: 1px solid #000000;
+			 width: 270px;  /* Defina a largura conforme necessário */
+    height: 200px; /* Defina a altura conforme necessário */
+		}
+		.captcharesposta {
+			height: 25px;
+			width: 250px;
+		
+		}
     </style>
 </head>
 <body>
@@ -83,20 +104,36 @@
 		<button onclick="searchWord()" class="fa-solid fa-magnifying-glass" style="width: 40px;height: 40px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);cursor: pointer;"><a href=""></a></button>
 		<div class="direito">
 		<a href="doacao.html">Doações</a>
-			<a href="createaccount.html">Criar uma conta</a>
+		<a href="createaccount.html">Criar uma conta</a>
 		<a href="entrar.html">Entrar</a>
 		</div>
     </header>
 	<div class="artigo">
-	  <h1>Flynganews</h1>
-    <p>Flynga News foi o jornal criado por KinhoYT1K depois da desistência de ZLOKZGG1K do cargo de prefeito de <a href="flyngacity.html">Flyngacity</a>. Foi o primeiro jornal impresso da cidade de <a href="flyngaland.html">Flyngaland</a>, criado pelo próprio prefeito da cidade.
- No começo, não havia uma sede para o Flynga News, e era um jornal bem pequeno, KinhoYT1K, com sua decisão de criar um jornal, foi matar galinhas para conseguir penas, lulas para conseguir tinta de polvo, e colheu plantações de cana de áçucar para conseguir papel.
- Em um dia normal, o Vilarte Kids, da cidade de <a href="flyngaland.html">Flyngaland</a>, que estava em condições precárias foi demolido, o prefeito e jornalista KinhoYT1K, aproveitou-se desse acontecimento para escrever a primeira edição do Flynga News.</p>
-	<h2>Notícias Marcantes</h1>
-	<p>1.Primeira notícia do Flynga News: foi abordado os temas demolição do Vilarte e o fim de <a href="flyngacity.html">Flyngacity</a><br>2.Processo contra Creme de Flynga: a marca Creme de Flynga levou um processo por causar reações alérgicas ao seus compradores<br>3.Cativeiro de José Fernando: Nessa notícia do Flynga News foi falado sobre os sequestros de José Fernando, e de seu Cativeiro<br>4.Reportagem sobre milk: nessa reportagem sobre milk foi ensinado como fazer milk na pré-escola, teve uma entrevista com Ícaro onde revelou verdades sobre a indústria do milk, e foi explicado o porquê de o milk da Gostavo Milk ser tão barato comparado ao da Icarús Milk. Essa foi a última edição do Flynganews publicada<br>5.Igor compra flynga robótica: após a flynga de Igor cair, oque foi noticiado no <a href="flungonews.html">Flungonews</a>, Igor apareceu no jornal após comprar uma flynga robótica por 8000 esmeraldas<br></p>
-	<h2>Concorrência com Flungo News</h1>
-	<p> O grande concorrente do FlyngaNews foi o <a href="flungonews.html">Flungonews</a>, que surgiu depois, o criador do jornal ZLOKZGG1K, provocava KinhoYT1K com notícias sensacionalistas em seu jornal, como o Flynga News ter falido (oque não aconteceu)
- Além disso, ele fez uma acusão falsa sobre KinhoYT1K matado lulas em massa, fazendo elas entrarem em perigo de extinção</p>
-	</div>
+	<h1>Entrar</h1>
+	<hr>
+	<p>Nome de utilizador</p>
+	<input type="text" placeholder="Coloque seu nome" class="frangal" id="nome">
+	<p>Email</p>
+	<input type=email" placeholder="Coloque seu senha" class="frangal">
+	<p>Senha</p>
+	<input type="password" placeholder="Coloque seu senha" class="frangal">
+	<p class="textopequeno">Recomenda-se compartilhar sua senha para todos os <br>amigos da escola,permita eles usar o seu perfil,liberdade de expressão.<br></a>
+	<button onclick="redirecionar()" style="width: 80px;height: 40px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);cursor: pointer;">Entrar</button>
+		<p>Usuários da semana</p>
+		<p class="textopequeno"">Nome:Kinho<br>Email:kinhothebest@flynganews.com<br>Senha:flynganewsémuitoruim</p>
+		<p class="textopequeno">Nome:Flyngauau<br>Email:flyngauaupaidefamilia@flyngauaucenter.com<br>Senha:123456</p>
+		<p class="textopequeno">Nome: Zlokz<br>Email:zlokz10m@flungonews.com<br>Senha:brincauaulegalzao</p>
+		<p class="textopequeno">Nome: Ienan<br>Email:ienandepressivo@c2j.com<br>Senha:ienandepressivo</p>
+		</div>
+		
+			<script>
+const nomeInput = document.getElementById('nome');
+
+function redirecionar() {
+    const nome = nomeInput.value; // Pegando o valor do input
+    window.location.href = `mandeumamensagem.html?name=${encodeURIComponent(nome)}`;
+}
+
+	</script>
 </body>
 </html>

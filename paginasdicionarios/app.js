@@ -21,7 +21,7 @@
 				"alan delas": "kagueinakama.html",
 				"milk": "emdesenvolvimento.html",
 				"premilk": "emdesenvolvimento.html",
-				"titakonakama": "titakonakama.html",
+				"titako nakama": "titakonakama.html",
 				"vizinhos brincantes": "vizinhosbrincantes.html"
             };
             
