@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador 2D</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #viewer {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ccc;
+            position: relative;
+            cursor: grab;
+        }
+        #image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="viewer">
+        <img id="image" src="flyngaland.png" alt="Imagem">
+    </div>
+    <script>
+        const viewer = document.getElementById("viewer");
+        const image = document.getElementById("image");
+        let isDragging = false;
+        let startX, startY, offsetX = 0, offsetY = 0;
+
+        viewer.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            startX = e.clientX - offsetX;
+            startY = e.clientY - offsetY;
+            viewer.style.cursor = "grabbing";
+        });
+
+        document.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+            offsetX = e.clientX - startX;
+            offsetY = e.clientY - startY;
+            image.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+        });
+
+        document.addEventListener("mouseup", () => {
+            isDragging = false;
+            viewer.style.cursor = "grab";
+        });
+    </script>
+</body>
+</html>

@@ -10,11 +10,11 @@
 				"flyngacity": "flyngacity.html",
 				"flyngaland": "emdesenvolvimento.html",
 				"flynganews": "flynganews.html",
-				"flyngauau": "emdesenvolvimento.html",
+				"flyngauau": "flyngauau.html",
 				"flyngopolis": "emdesenvolvimento.html",
 				"flyngues": "emdesenvolvimento.html",
 				"gostavo": "emdesenvolvimento.html",
-				"icaro": "emdesenvolvimento.html",
+				"icaro": "icaro.html",
 				"icarosmilk": "emdesenvolvimento.html",
 				"igor": "emdesenvolvimento.html",
 				"kaguei nakama": "kagueinakama.html",
@@ -22,7 +22,8 @@
 				"milk": "emdesenvolvimento.html",
 				"premilk": "emdesenvolvimento.html",
 				"titako nakama": "titakonakama.html",
-				"vizinhos brincantes": "vizinhosbrincantes.html"
+				"vizinhos brincantes": "vizinhosbrincantes.html",
+				"creme de flynga": "cremedeflynga.html"
             };
             
             if (dictionary[word]) {

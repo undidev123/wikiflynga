@@ -1,28 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicionário em Flynguês - Flyngauau</title>
-    <script>
-        function pesquisar() {
-            var termo = document.getElementById("pesquisa").value.toLowerCase();
-            if (termo === "maça") {
-                window.location.href = "maca.html";
-            } else {
-                alert("Palavra não encontrada!");
-            }
+    <title>Flyngauau</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<script src="app.js"></script>
+    <style>
+        body {
+			font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            background-color: white;
         }
-    </script>
+        header {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 10px 10px;
+            border-bottom: 1px solid #ddd;
+            gap: 10px;
+        }
+        .menu-button {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .search-bar {
+            padding: 5px;
+			height: 25px;
+			width: 300px;
+        }
+        .user-options {
+            display: flex;
+            gap: 10px;
+        }
+        aside {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+            position: fixed;
+            height: 100%;
+            top: 50px;
+            left: 0;
+        }
+        main {
+            margin-left: 270px;
+            padding: 20px;
+            background: white;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+        }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+		.direito {
+		margin-left: auto;
+		}
+		.artigo {
+			padding: 10px;
+		}
+		.logo {
+			width: 145px;
+			height: 40px;
+		}
+		.frangal  {
+		padding: 5px;
+			height: 15px;
+			width: 250px;
+		}
+		.textopequeno {
+		color: rgb(84, 89, 83);
+		font-size: 12px;
+		}
+		.captcha {
+			padding: 5px;
+			background-color: rgb(248, 249, 250);
+			border: 1px solid #000000;
+			 width: 270px;  /* Defina a largura conforme necessário */
+    height: 200px; /* Defina a altura conforme necessário */
+		}
+		.captcharesposta {
+			height: 25px;
+			width: 250px;
+		
+		}
+    </style>
 </head>
 <body>
-    <h1>Dicionário em Flynguês</h1>
-    <input type="text" id="pesquisa" placeholder="Pesquise uma palavra...">
-    <button onclick="pesquisar()">Pesquisar</button>
-    
-    <h1>Flyngauau</h1>
-    <p>Flyngauau foi um cara meio timido que começou simples,em tom de brincandeira assustando alguns moradores de uma vila,ganhado uma musica nada demais,até que ele em <a href="flyngopolis.html">flyngopolis</a> foi recebido por muito carinho por kinho,ganhou uma cama e um lar seguro e depois o lugar denonimado "Toca do flyngauau" começou a se expandir,até que uma linda mulher foi pro flyngauau center que era o que antes era a toca do flyngauau e flyngou com ele e depois disso eles tiveram muitos filhos,e cada filho teve um emprego sendo muito feliz para sempre.</p>
+    <header>
+        <button class="menu-button">☰</button>
+        <a href="../index.html"><img class="logo" src="logo.png"></a>
+          <input type="text" id="search" placeholder="Pesquise uma palavra..." class="search-bar">
+		<button onclick="searchWord()" class="fa-solid fa-magnifying-glass" style="width: 40px;height: 40px;background-color: rgb(51, 102, 204);color: white;border: 1px solid rgb(255, 255, 255,);cursor: pointer;"><a href=""></a></button>
+		<div class="direito">
+		<a href="doacao.html">Doações</a>
+		<a href="createaccount.html">Criar uma conta</a>
+		<a href="entrar.html">Entrar</a>
+		</div>
+    </header>
+	<div class="artigo">
+	<h1>Flyngauau</h1>
+	<p>O flyngauau chamado inicialmente de flyngau é um empresario,pai de familia e morador de flyngopolis,ele começou sua carreira em flyngopolis morando na denonimada toca do flyngauau que com a ajuda de kinho e zlokz se expandiu para quase um shopping apelidado de "Flyngauau center",ele virou villager flecheiro e rapidamente chegou no nivel maximo da sua profissão,conseguindo ter um nome renomado na cidade e bem conhecido por ai,a historia de pai de familia começou com uma nova integrante na flyngauau center,uma villager cozinheira que veio a negocios para trabalhar no flangas fritas chamada de "Flyngaaua" mais rapidamente eles se conectaram e depois de um tempo eles finalmente começaram a fazer filhos,depois de um tempo ele virou avô sendo bem conhecido na cidade</p>
+	<h1>Flyngauau center</h1>
+	<p>Antes desse lugar se chamar flyngauau center ele era denonimado toca do flyngauau,o lugar favorito do flyngauau até que com a ajuda do kinho e zlokz eles fizeram um pequeno quartinho pro flyngauau,mas em um dia kinho decidiu fazer um salão de baús e zlokz também decidiu,até que kinho e zlokz decidiram fazer um andar subterrâneo do flyngauau center,onde seria realmente um centro.</p>
+	<h1>Carreira profissional</h1>
+	<p>1. Clerigo (por um tempo inicial o flyngauau foi um villager clerigo mais ele não teve sucesso nessa profissão e decidiu trocar)<br>2. Flecheiro (Esse foi o emprego mais rentavel do flyngauau onde ele chegou no nivel maximo e depois de um tempo se aposentou)</p>
+	<h1>Familia do flyngauau</h1>
+	<p>O flyngauau teve 4 filhos inicialmente com a esposa dele denonimada de Flyngaaua,e cada um recebeu um nome sendo eles "Flango nopelo,Flyngaules Milk,?,?" e o flango nopelo em um belo dia decidiu fazer um filho com sua irmã,e assim o nopelinho nasceu.Posteriormente o flyngauau teve mais um filho</p>
 	<h1>Origem</h1>
-	<p>A origem dele começou com um cara meio timido que em forma de trollagem começou assustar umas pessoas de uma vila local perto de <a href="flyngaland.html">Flyngaland</a> chamado flungolandia,ele até ganhou uma musiquinha mas nada demais,até que ele foi pra <a href="flyngopolis.html">flyngopolis</a> e sua historia começou.</p>
-</body>
-</html>
+	<p>A historia do flyngauau não começou em flyngaland,começou quando moradores de uma vila começaram a ver um cara meio bizarro andando por ai,e inspirado nisso,o <a href="titakonakama">Titako Nakama</a> decidiu fazer uma música inspirado nessa historia.
+	</div>
+	</body>
+	</html>
